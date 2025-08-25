@@ -1,0 +1,17 @@
+.header__container {
+    position: fixed;
+    width: 100%; height: 6em;
+    background-color: var(--header-background-color);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    width: 16em; height: 4em;
+    margin-left: 1em;
+}
+
+.logo img {
+    width: auto; height: 100%;
+}
