@@ -20,3 +20,14 @@
 .hover__search__bar {
     border-color: var(--blue-text-color);
 }
+
+.active {
+    position: fixed;
+    top: 0; right: 0;
+    width: 25em; height: 100%;
+    background-color: gray;
+}
+
+.not__focused {
+    display: none;
+}

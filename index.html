@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="src/style/reset.css">
     <link rel="stylesheet" href="src/style/vars.css">
     <link rel="stylesheet" href="src/style/index.css">
-    <link rel="stylesheet" href="src/style/animations.css">
     <link rel="stylesheet" href="src/style/responsiveness.css">
+    <link rel="stylesheet" href="src/style/animations.css">
     <script src="https://kit.fontawesome.com/eb455bbf5b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -57,8 +57,8 @@
                         </ul>
                         <div class="search__bar">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <form action="">
-                                <input type="text" placeholder="search for something" size="30" name="search__query" autocomplete="off" autofocus="off" autocorrect="off">
+                            <form action="" class="not__focused">
+                                <input class="not__focused" type="text" placeholder="search for something" name="search__query" autocomplete="off" autofocus="off" autocorrect="off">
                             </form>
                         </div>
                     </div>
@@ -76,6 +76,14 @@
                             <span>REGISTER</span>
                         </a>
                     </div>
+                </div>
+                <div class="menu__button">
+                    <button type="button" id="menu__toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="menu__container">
+
                 </div>
             </div>
         </header>
