@@ -26,7 +26,7 @@ Animações sutis para melhor experiência do usuário.
 
 Clone este repositório:
 
-````git clone https://github.com/seuusuario/seuprojeto.git```
+```git clone https://github.com/seuusuario/seuprojeto.git```
 
 Abra o arquivo index.html no seu navegador favorito.
 
