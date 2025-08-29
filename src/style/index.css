@@ -29,20 +29,20 @@
     color: black;
 }
 
-.header__container a {
+.header__container a, button {
     color: var(--default-text-color);
     text-decoration: none;
     font-family: var(--default-font-family);
     font-size: 1.2em;
 }
 
-.search__bar {
+.search__bar, .menu__button {
     background-color: var(--search-bar-background-color);
     color: var(--default-text-color);
     padding: .5em;
     border-radius: 100em;
     font-size: 1.2em;
-    cursor: text;
+    cursor: pointer;
     display: flex;
     align-items: center;
 }
@@ -57,6 +57,7 @@
     color: var(--default-text-color);
     outline: none;
     font-size: 1.2em;
+    width: 15em;
 }
 
 .account__container div {
@@ -66,4 +67,13 @@
 .account__container .login a {
     color: var(--gray-text-color);
     font-size: 1em;
+}
+
+.menu__container {
+    position: fixed;
+}
+
+.menu__button {
+    display: none;
+    z-index: 1000;
 }
