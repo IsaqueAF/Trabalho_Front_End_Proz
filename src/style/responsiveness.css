@@ -1,26 +1,35 @@
 @media screen and (max-width: 1200px) {
-    .button span {
-        display: none;
-    }
+  .button span {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 750px) {
-    .focused {
-        position: fixed;
-        top: 5.5em;
-        left: 20%;
-        right: 20%;
-    }
-    .search__bar form, .search__bar form input {
-        width: 100%;
-    }
+@media screen and (max-width: 1500px) and (min-width: 1200px),
+  screen and (max-width: 1000px) {
+  .focused {
+    position: fixed;
+    top: 5em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
-@media screen and (max-width: 500px) {
-    .button i, .account__container, .nav__container ul {
-        display: none;
-    }
-    .menu__button {
-        display: block;
-    }
+@media screen and (max-width: 650px) {
+  .search__bar {
+    background-color: transparent;
+  }
+  .search__bar form input {
+    width: 10em;
+  }
+  .focused {
+    background-color: var(--search-bar-background-color);
+  }
+  .account__container,
+  .nav__container {
+    display: none;
+  }
+  .mobile__buttons {
+    display: flex;
+    padding: 0;
+  }
 }

@@ -1,33 +1,22 @@
 .button {
-    transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
 .button:hover {
-    transform: scale(1.1) translateY(-2px);
-    text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1) translateY(-2px);
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 .button a:hover {
-    color: var(--hover-text-color);
+  color: var(--hover-text-color);
 }
 
-.search__bar {
-    border-style: ridge;
-    border-width: .1em;
-    border-color: var(--search-bar-background-color);
-}
-
-.hover__search__bar {
-    border-color: var(--blue-text-color);
-}
-
-.active {
-    position: fixed;
-    top: 0; right: 0;
-    width: 25em; height: 100%;
-    background-color: gray;
+.focused {
+  border-style: ridge;
+  border-width: 0.1em;
+  border-color: var(--blue-text-color);
 }
 
 .not__focused {
-    display: none;
+  display: none;
 }

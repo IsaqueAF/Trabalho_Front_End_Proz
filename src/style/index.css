@@ -1,79 +1,91 @@
 .header__container {
-    position: relative;
-    height: 3em; top: 0; left: 0; right: 0;
-    background-color: var(--header-background-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
+  position: relative;
+  height: 3em;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--header-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
 }
 
 .logo {
-    height: 3em;
+  height: 3em;
 }
 
 .logo img {
-    width: auto; height: 100%;
+  width: auto;
+  height: 100%;
 }
 
-.nav__container, .nav__container ul, .account__container {
-    display: flex;
-    align-items: center;
+.nav__container,
+.nav__container ul,
+.account__container {
+  display: flex;
+  align-items: center;
 }
 
 .nav__container ul li {
-    margin-right: 2em;
+  margin-right: 2em;
 }
 
 .nav__container ul li div {
-    color: black;
+  color: black;
 }
 
-.header__container a, button {
-    color: var(--default-text-color);
-    text-decoration: none;
-    font-family: var(--default-font-family);
-    font-size: 1.2em;
+a,
+button {
+  color: var(--default-text-color);
+  text-decoration: none;
+  font-family: var(--default-font-family);
+  font-size: 1.2em;
 }
 
-.search__bar, .menu__button {
-    background-color: var(--search-bar-background-color);
-    color: var(--default-text-color);
-    padding: .5em;
-    border-radius: 100em;
-    font-size: 1.2em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+.search__bar,
+.mobile__buttons {
+  background-color: var(--search-bar-background-color);
+  color: var(--default-text-color);
+  padding: 0.5em;
+  border-radius: 100em;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .search__bar form {
-    margin: .1em;
+  margin: 0.1em;
 }
 
 .search__bar form input {
-    border: none;
-    background-color: var(--search-bar-background-color);
-    color: var(--default-text-color);
-    outline: none;
-    font-size: 1.2em;
-    width: 15em;
+  border: none;
+  background-color: var(--search-bar-background-color);
+  color: var(--default-text-color);
+  outline: none;
+  font-size: 1.2em;
+  width: 15em;
 }
 
 .account__container div {
-    margin-right: 1em;
+  margin-right: 1em;
 }
 
 .account__container .login a {
-    color: var(--gray-text-color);
-    font-size: 1em;
+  color: var(--gray-text-color);
+  font-size: 1em;
 }
 
 .menu__container {
-    position: fixed;
+  position: fixed;
 }
 
-.menu__button {
-    display: none;
-    z-index: 1000;
+.mobile__buttons {
+  display: none;
+  background-color: transparent;
+}
+
+.mobile__buttons #menu__togle {
+  z-index: 1000;
 }

@@ -1,95 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Template</title>
-    <link rel="stylesheet" href="src/style/reset.css">
-    <link rel="stylesheet" href="src/style/vars.css">
-    <link rel="stylesheet" href="src/style/index.css">
-    <link rel="stylesheet" href="src/style/responsiveness.css">
-    <link rel="stylesheet" href="src/style/animations.css">
-    <script src="https://kit.fontawesome.com/eb455bbf5b.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="src/style/reset.css" />
+    <link rel="stylesheet" href="src/style/vars.css" />
+    <link rel="stylesheet" href="src/style/index.css" />
+    <link rel="stylesheet" href="src/style/responsiveness.css" />
+    <link rel="stylesheet" href="src/style/animations.css" />
+    <script
+      src="https://kit.fontawesome.com/eb455bbf5b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="body__container">
-        <header>
-            <div class="header__container">
-                <div class="logo">
-                    <img src="src/assets/images/generic-logo.png" alt="Logo">
-                </div>
-                <nav>
-                    <div class="nav__container">
-                        <ul>
-                            <li>
-                                <div class="home button">
-                                    <a href="#home">
-                                        <i class="fa-solid fa-house"></i>
-                                        <span>HOME</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="service button">
-                                    <a href="#service">
-                                        <i class="fa-solid fa-bell-concierge"></i>
-                                        <span>SERVICE</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="about__us button">
-                                    <a href="#about__us">
-                                        <i class="fa-solid fa-people-roof"></i>
-                                        <span>ABOUT</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="contact button">
-                                    <a href="#contact">
-                                        <i class="fa-solid fa-phone-volume"></i>
-                                        <span>CONTACT</span>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="search__bar">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <form action="" class="not__focused">
-                                <input class="not__focused" type="text" placeholder="search for something" name="search__query" autocomplete="off" autofocus="off" autocorrect="off">
-                            </form>
-                        </div>
-                    </div>
-                </nav>
-                <div class="account__container">
-                    <div class="login button">
-                        <a href="#">
-                            <i class="fa-solid fa-right-to-bracket"></i>
-                            <span>LOGIN</span>
-                        </a>
-                    </div>
-                    <div class="register button">
-                        <a href="#">
-                            <i class="fa-solid fa-address-card"></i>
-                            <span>REGISTER</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="menu__button">
-                    <button type="button" id="menu__toggle">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
-                <div class="menu__container">
+      <header>
+        <div class="header__container">
+          <div class="logo">
+            <img src="src/assets/images/generic-logo.png" alt="Logo" />
+          </div>
 
-                </div>
+          <nav>
+            <div class="nav__container">
+              <ul>
+                <li>
+                  <div class="home button">
+                    <a href="#home">
+                      <i class="fa-solid fa-house"></i>
+                      <span>HOME</span>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="service button">
+                    <a href="#service">
+                      <i class="fa-solid fa-bell-concierge"></i>
+                      <span>SERVICE</span>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="about__us button">
+                    <a href="#about__us">
+                      <i class="fa-solid fa-people-roof"></i>
+                      <span>ABOUT</span>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact button">
+                    <a href="#contact">
+                      <i class="fa-solid fa-phone-volume"></i>
+                      <span>CONTACT</span>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+              <div class="search__bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <form action="" class="not__focused">
+                  <input
+                    type="text"
+                    placeholder="search for something"
+                    name="search__query"
+                    autocomplete="off"
+                    autofocus="off"
+                    autocorrect="off"
+                  />
+                </form>
+              </div>
             </div>
-        </header>
-        <main>
-        </main>
+          </nav>
+
+          <div class="mobile__buttons">
+            <button type="button" id="menu__toggle">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+
+          <div class="menu__container"></div>
+
+          <div class="account__container">
+            <div class="login button">
+              <a href="#">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <span>LOGIN</span>
+              </a>
+            </div>
+            <div class="register button">
+              <a href="#">
+                <i class="fa-solid fa-address-card"></i>
+                <span>REGISTER</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main></main>
     </div>
     <script type="module" src="src/script/index.js"></script>
-</body>
+  </body>
 </html>
