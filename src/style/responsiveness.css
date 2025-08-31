@@ -1,12 +1,12 @@
 @media screen and (max-width: 1200px) {
-  .button span {
+  .header__container .button span {
     display: none;
   }
 }
 
 @media screen and (max-width: 1500px) and (min-width: 1200px),
   screen and (max-width: 1000px) {
-  .focused {
+  .hover {
     position: fixed;
     top: 5em;
     left: 50%;
@@ -15,21 +15,12 @@
 }
 
 @media screen and (max-width: 650px) {
-  .search__bar {
-    background-color: transparent;
-  }
   .search__bar form input {
-    width: 10em;
-  }
-  .focused {
-    background-color: var(--search-bar-background-color);
+    width: 60dvw;
   }
   .account__container,
   .nav__container {
-    display: none;
-  }
-  .mobile__buttons {
-    display: flex;
-    padding: 0;
+    flex-direction: column;
+    align-items: normal;
   }
 }

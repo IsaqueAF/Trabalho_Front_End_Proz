@@ -1,0 +1,29 @@
+/* buttons */
+a,
+button {
+  display: inline-block;
+  color: var(--default-text-color);
+  text-decoration: none;
+  font-family: var(--default-font-family);
+  font-size: 1.2em;
+}
+
+.small {
+  font-size: 1em;
+}
+
+.gray {
+  color: var(--gray-text-color);
+}
+
+.selected {
+  border-style: ridge;
+  border-bottom-width: 2px;
+  border-color: white;
+  background-image: linear-gradient(
+    to top,
+    rgb(255, 255, 255, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+  padding-bottom: 0.1em;
+}

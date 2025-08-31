@@ -1,3 +1,5 @@
+/* header */
+
 .header__container {
   position: relative;
   height: 3em;
@@ -11,6 +13,8 @@
   padding: 1em;
 }
 
+/* logo */
+
 .logo {
   height: 3em;
 }
@@ -19,6 +23,8 @@
   width: auto;
   height: 100%;
 }
+
+/* nav */
 
 .nav__container,
 .nav__container ul,
@@ -35,13 +41,7 @@
   color: black;
 }
 
-a,
-button {
-  color: var(--default-text-color);
-  text-decoration: none;
-  font-family: var(--default-font-family);
-  font-size: 1.2em;
-}
+/* search bar */
 
 .search__bar,
 .mobile__buttons {
@@ -68,24 +68,67 @@ button {
   width: 15em;
 }
 
+/* account */
+
 .account__container div {
   margin-right: 1em;
 }
 
-.account__container .login a {
-  color: var(--gray-text-color);
-  font-size: 1em;
-}
+/* menu */
 
 .menu__container {
   position: fixed;
+  background-color: var(--header-background-color);
+  height: 100%;
+  width: 15em;
+  top: 0;
+  right: 0;
+  padding-top: 5em;
+}
+
+.menu__container ul,
+.menu__container .account__container {
+  display: block;
+  margin: 0.5em;
+}
+
+.menu__container a {
+  margin: 0.5em;
 }
 
 .mobile__buttons {
-  display: none;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 1000;
+  background-color: var(--header-background-color);
+  padding: 0;
+}
+
+.mobile__buttons button {
+  padding: 0.5em;
+}
+
+.mobile__buttons .search__bar {
   background-color: transparent;
 }
 
-.mobile__buttons #menu__togle {
-  z-index: 1000;
+/* main */
+
+main {
+  color: black;
+  font-size: 50px;
+}
+
+/* footer */
+
+.footer__container {
+  position: relative;
+  height: 10em;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--header-background-color);
+  display: flex;
+  padding: 1em;
 }

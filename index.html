@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Template</title>
-    <link rel="stylesheet" href="src/style/reset.css" />
     <link rel="stylesheet" href="src/style/vars.css" />
-    <link rel="stylesheet" href="src/style/index.css" />
+    <link rel="stylesheet" href="src/style/reset.css" />
+    <link rel="stylesheet" href="src/style/global-style.css" />
+    <link rel="stylesheet" href="src/style/main.css" />
     <link rel="stylesheet" href="src/style/responsiveness.css" />
     <link rel="stylesheet" href="src/style/animations.css" />
     <script
@@ -27,32 +28,32 @@
             <div class="nav__container">
               <ul>
                 <li>
-                  <div class="home button">
-                    <a href="#home">
+                  <div class="home">
+                    <a href="#home" class="button selected">
                       <i class="fa-solid fa-house"></i>
                       <span>HOME</span>
                     </a>
                   </div>
                 </li>
                 <li>
-                  <div class="service button">
-                    <a href="#service">
+                  <div class="service">
+                    <a href="#service" class="button">
                       <i class="fa-solid fa-bell-concierge"></i>
                       <span>SERVICE</span>
                     </a>
                   </div>
                 </li>
                 <li>
-                  <div class="about__us button">
-                    <a href="#about__us">
+                  <div class="about__us">
+                    <a href="#about__us" class="button">
                       <i class="fa-solid fa-people-roof"></i>
                       <span>ABOUT</span>
                     </a>
                   </div>
                 </li>
                 <li>
-                  <div class="contact button">
-                    <a href="#contact">
+                  <div class="contact">
+                    <a href="#contact" class="button">
                       <i class="fa-solid fa-phone-volume"></i>
                       <span>CONTACT</span>
                     </a>
@@ -61,7 +62,7 @@
               </ul>
               <div class="search__bar">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <form action="" class="not__focused">
+                <form action="" class="hidden">
                   <input
                     type="text"
                     placeholder="search for something"
@@ -75,23 +76,15 @@
             </div>
           </nav>
 
-          <div class="mobile__buttons">
-            <button type="button" id="menu__toggle">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-          </div>
-
-          <div class="menu__container"></div>
-
           <div class="account__container">
-            <div class="login button">
-              <a href="#">
+            <div class="login">
+              <a href="#" class="small gray button">
                 <i class="fa-solid fa-right-to-bracket"></i>
                 <span>LOGIN</span>
               </a>
             </div>
-            <div class="register button">
-              <a href="#">
+            <div class="register">
+              <a href="#" class="button">
                 <i class="fa-solid fa-address-card"></i>
                 <span>REGISTER</span>
               </a>
@@ -100,8 +93,25 @@
         </div>
       </header>
 
-      <main></main>
+      <div class="mobile__buttons hidden">
+        <button type="button" id="menu__toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="menu__container hidden">
+        <hr />
+        <hr />
+      </div>
+
+      <main>
+        <div class="main__container"></div>
+      </main>
+
+      <footer>
+        <div class="footer__container"></div>
+      </footer>
     </div>
-    <script type="module" src="src/script/index.js"></script>
+    <script type="module" src="src/script/main.js"></script>
   </body>
 </html>
