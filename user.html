@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Template</title>
+    <link rel="stylesheet" href="src/style/vars.css" />
+    <link rel="stylesheet" href="src/style/reset.css" />
+    <link rel="stylesheet" href="src/style/global-style.css" />
+    <link rel="stylesheet" href="src/style/user.css" />
+    <link rel="stylesheet" href="src/style/animations.css" />
+    <script
+      src="https://kit.fontawesome.com/eb455bbf5b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="back">
+      <a href="index.html" class="solid__button">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back</span>
+      </a>
+    </div>
+    <div class="body__container">
+      <main>
+        <div class="main__container">
+          <div class="register" id="register">
+            <form>
+              <h1>REGISTER</h1>
+
+              <div class="name input__box">
+                <input type="text" name="name" id="name" />
+                <label for="name">Name</label>
+                <i class="fa-solid fa-signature"></i>
+              </div>
+
+              <div class="email input__box">
+                <input type="email" name="email" id="email" />
+                <label for="email">E-mail</label>
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+
+              <div class="password input__box">
+                <input type="password" name="password" id="password" />
+                <label for="password">Password</label>
+                <i class="fa-solid fa-unlock"></i>
+              </div>
+
+              <div class="confirm__password input__box">
+                <input
+                  type="password"
+                  name="confirm__password"
+                  id="confirm__password"
+                />
+                <label for="confirm__password">Confirm password</label>
+                <i class="fa-solid fa-lock"></i>
+              </div>
+
+              <div>
+                <button type="button" class="solid__button reverse">
+                  <span>Register</span>
+                  <i class="fa-solid fa-address-card"></i>
+                </button>
+              </div>
+
+              <span
+                >Already have an account?
+                <a href="#login" class="button">Login!</a></span
+              >
+            </form>
+          </div>
+          <div class="login" id="login">
+            <form>
+              <h1>LOGIN</h1>
+
+              <div class="email input__box">
+                <input type="email" name="email" id="email" />
+                <label for="email">E-mail</label>
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+
+              <div class="password input__box">
+                <input type="password" name="password" id="password" />
+                <label for="password">Password</label>
+                <i class="fa-solid fa-lock"></i>
+              </div>
+
+              <div>
+                <button type="button" class="solid__button reverse">
+                  <span>Login</span>
+                  <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
+              </div>
+
+              <span
+                >Don't have an account?
+                <a href="#register" class="button">Register!</a></span
+              >
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

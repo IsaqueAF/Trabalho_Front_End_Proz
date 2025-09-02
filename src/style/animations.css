@@ -8,6 +8,23 @@
   color: var(--hover-text-color);
 }
 
+.button::after {
+  content: "";
+  display: block;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--hover-text-color);
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.button:hover::after {
+  transform: scaleX(1);
+}
+
 .focused {
   background-color: var(--search-bar-background-color) !important;
   border-style: ridge;
@@ -17,4 +34,16 @@
 
 .hidden {
   display: none;
+}
+
+.menu__hidden {
+  transform: translateX(100%);
+}
+
+.shrunken {
+  width: 0 !important;
+}
+
+.search__bar form input {
+  transition: 0.5s;
 }

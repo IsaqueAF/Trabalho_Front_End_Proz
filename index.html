@@ -29,7 +29,7 @@
               <ul>
                 <li>
                   <div class="home">
-                    <a href="#home" class="button selected">
+                    <a href="#home" class="button">
                       <i class="fa-solid fa-house"></i>
                       <span>HOME</span>
                     </a>
@@ -64,12 +64,10 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <form action="" class="hidden">
                   <input
+                    class="shrunken"
                     type="text"
                     placeholder="search for something"
                     name="search__query"
-                    autocomplete="off"
-                    autofocus="off"
-                    autocorrect="off"
                   />
                 </form>
               </div>
@@ -78,13 +76,13 @@
 
           <div class="account__container">
             <div class="login">
-              <a href="#" class="small gray button">
+              <a href="/user.html#login" class="small gray button">
                 <i class="fa-solid fa-right-to-bracket"></i>
                 <span>LOGIN</span>
               </a>
             </div>
             <div class="register">
-              <a href="#" class="button">
+              <a href="/user.html#register" class="button">
                 <i class="fa-solid fa-address-card"></i>
                 <span>REGISTER</span>
               </a>
@@ -94,12 +92,12 @@
       </header>
 
       <div class="mobile__buttons hidden">
-        <button type="button" id="menu__toggle">
+        <button type="button" id="menu__toggle" class="simple__button">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
 
-      <div class="menu__container hidden">
+      <div class="menu__container menu__hidden">
         <hr />
         <hr />
       </div>

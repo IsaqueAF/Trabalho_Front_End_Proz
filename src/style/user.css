@@ -1,0 +1,70 @@
+.body__container {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to top,
+    var(--blue-gradient-color-one),
+    var(--blue-gradient-color-two)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#register,
+#login {
+  display: none;
+}
+
+#register:target,
+#login:target {
+  display: flex;
+}
+
+.main__container > div {
+  background-color: var(--header-background-color);
+  padding: 3em;
+  border-style: ridge;
+  border-radius: 2em;
+}
+
+.main__container > div > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20em;
+}
+
+.main__container > div > form > h1 {
+  font-size: 3em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--hover-text-color);
+  margin-bottom: 0.5em;
+}
+
+body > .back {
+  position: fixed;
+  left: 1em;
+  top: 1em;
+}
+
+.main__container > div > form > div > .solid__button {
+  margin: 2em 0 2em 0;
+}
+
+.main__container > div > form > div > .solid__button i,
+.main__container > div > form > div > .solid__button span {
+  font-size: 2em;
+}
+
+.main__container > div > form > span {
+  color: var(--default-text-color);
+  font-family: var(--default-font-family);
+  font-size: 1em;
+}
+
+.main__container > div > form > span > a {
+  font-size: 1em;
+  font-weight: bold;
+}

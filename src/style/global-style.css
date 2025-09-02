@@ -1,6 +1,6 @@
 /* buttons */
-a,
-button {
+.simple__button,
+.button {
   display: inline-block;
   color: var(--default-text-color);
   text-decoration: none;
@@ -26,4 +26,79 @@ button {
     rgba(0, 0, 0, 0)
   );
   padding-bottom: 0.1em;
+}
+
+.solid__button {
+  background-color: var(--header-background-color);
+  padding: 0.5em 3em 0.5em 3em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.solid__button:hover {
+  transform: scale(1.1);
+}
+
+.solid__button i,
+.solid__button span {
+  color: var(--default-text-color);
+}
+
+.solid__button span {
+  font-family: var(--default-font-family);
+  margin: 0 0.5em 0 0.5em;
+}
+
+.reverse {
+  background-color: var(--default-text-color);
+}
+
+.reverse i,
+.reverse span {
+  color: var(--header-background-color);
+}
+
+/* Input box */
+.input__box {
+  position: relative;
+  margin: 0.8em 0 0.8em 0;
+  width: -webkit-fill-available;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6em;
+  border-style: solid;
+  border-radius: 100em;
+  border-width: 2px;
+  border-color: var(--default-text-color);
+  color: var(--default-text-color);
+  background-color: var(--header-background-color);
+  cursor: pointer;
+}
+
+.input__box > input {
+  border: none;
+  outline: none;
+  background-color: var(--header-background-color);
+  color: var(--default-text-color);
+  width: -webkit-fill-available;
+}
+
+.input__box > label {
+  position: absolute;
+  left: 1em;
+  padding: 5px;
+  border-radius: 100em;
+  background-color: var(--header-background-color);
+  top: 0;
+  transform: translateY(-0.8em);
+}
+
+.input__box > i {
+  margin: 0 5px 0 5px;
 }
