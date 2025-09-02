@@ -1,0 +1,19 @@
+@media screen and (max-width: 500px) {
+  .body__container {
+    display: block;
+  }
+  .main__container > div {
+    border-radius: 2em 2em 0 0;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+  }
+  .main__container > div > form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+    .input__box {
+        height: 1.8em;
+    }
+}

@@ -1,0 +1,15 @@
+.container {
+    margin: 6em 5em 0 5em;
+    font-size: 2em;
+}
+
+span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    
+}
+
+p {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

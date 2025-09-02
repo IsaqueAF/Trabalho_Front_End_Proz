@@ -1,4 +1,4 @@
-// Responsiveness
+// Elements
 const header = document.querySelector(".header__container");
 
 const searchBar = document.querySelector(".search__bar");
@@ -14,70 +14,73 @@ const inputQuery = document.querySelector(".search__bar form input");
 
 const menuButton = document.getElementById("menu__toggle");
 
+// variables and constants
 const breakPoint = 650;
 
-let changed = false;
+let changed = true;
 let change = false;
 
 let offscreenHeader = false;
 let searchBarFocused = false;
 
-function moveElements() {
-  const headerRect = header.getBoundingClientRect();
+// funcions
 
-  if (headerRect.bottom <= 0) {
+function checkHeaderOnScreen (header) {
+  return header.getBoundingClientRect().bottom <= 0;
+}
+
+function MoveElementsToDesktop() {
+  mobileButtons.classList.remove("hidden");
+  mobileButtons.prepend(searchBar);
+  menu.insertBefore(nav, menu.children[1]);
+  menu.append(accountContainer);
+}
+
+function MoveElementsToMobile() {
+  mobileButtons.classList.add("hidden");
+  menu.classList.add("menu__hidden");
+  header.insertBefore(nav, header[1]);
+  navContainer.append(searchBar);
+  header.append(accountContainer);
+}
+
+// responsiveness javascript
+
+function MoveElements() {
+  offscreenHeader = checkHeaderOnScreen(header);
+
+  if (window.innerWidth <= breakPoint || offscreenHeader) {
+
     searchBar.classList.remove("hover");
-    offscreenHeader = true;
+
+    if (!changed) {return;}
+    change = !inputQuery.classList.contains("shrunken");
+
+    MoveElementsToDesktop();
+
+    changed = !changed;
+
   } else {
+
     if (searchBarFocused) {
       searchBar.classList.add("hover");
     } else {
       searchBar.classList.remove("hover");
     }
-    offscreenHeader = false;
-  }
 
-  if (window.innerWidth <= breakPoint || offscreenHeader) {
-    if (!changed) {
-      return;
-    }
+    if (changed) {return;}
+    change = !inputQuery.classList.contains("shrunken");
 
-    mobileButtons.classList.remove("hidden");
-    if (!inputQuery.classList.contains("shrunken")) {
-      change = true;
-    }
-    mobileButtons.prepend(searchBar);
-
-    menu.insertBefore(nav, menu.children[1]);
-    menu.append(accountContainer);
+    MoveElementsToMobile();
 
     changed = !changed;
-  } else {
-    if (changed) {
-      return;
-    }
-
-    mobileButtons.classList.add("hidden");
-    menu.classList.add("menu__hidden");
-
-    header.insertBefore(nav, header[1]);
-    if (!inputQuery.classList.contains("shrunken")) {
-      change = true;
-    }
-    navContainer.append(searchBar);
-
-    header.append(accountContainer);
-
-    changed = !changed;
+    
   }
 }
 
-window.addEventListener("resize", moveElements);
-window.addEventListener("scroll", moveElements);
-
-window.addEventListener("hashchange", () => {
-  moveElements();
-});
+window.addEventListener("resize", MoveElements);
+window.addEventListener("scroll", MoveElements);
+document.addEventListener('DOMContentLoaded', MoveElements);
 
 // Search bar
 

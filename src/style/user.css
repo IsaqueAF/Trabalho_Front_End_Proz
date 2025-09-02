@@ -1,5 +1,9 @@
+body {
+  height: 100vh;
+}
+
 .body__container {
-  min-height: 100vh;
+  height: 100vh;
   background-image: linear-gradient(
     to top,
     var(--blue-gradient-color-one),
