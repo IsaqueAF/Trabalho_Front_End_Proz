@@ -130,3 +130,58 @@ document.addEventListener("click", (event) => {
     menu.classList.add("menu__hidden");
   }
 });
+
+// carousel
+function SetCarousel(carouselSelector) {
+  const carousel = document.querySelector(carouselSelector);
+  const radios = carousel.querySelectorAll('input[type="radio"]');
+  const leftArrow = carousel.querySelector(".nav > .left");
+  const rightArrow = carousel.querySelector(".nav > .right");
+
+  radios[0].checked = true;
+
+  function moveSlide(direction) {
+    const activeRadio = carousel.querySelector('input[type="radio"]:checked');
+    let currentIndex = Array.from(radios).indexOf(activeRadio);
+    let nextIndex = currentIndex + direction;
+
+    if (nextIndex >= radios.length) {
+      nextIndex = 0;
+    } else if (nextIndex < 0) {
+      nextIndex = radios.length - 1;
+    }
+
+    radios[nextIndex].checked = true;
+  }
+
+  setInterval(() => moveSlide(1), 10000);
+
+  leftArrow.addEventListener("click", () => moveSlide(-1));
+  rightArrow.addEventListener("click", () => moveSlide(1));
+}
+
+SetCarousel(".carousel:first-child");
+
+// image
+const allImages = document.getElementsByTagName("img");
+
+for (let i = 0; i < allImages.length; i++) {
+  const image = allImages[i];
+
+  const checkDimensions = () => {
+    if (image.naturalWidth > image.naturalHeight) {
+      image.classList.add("wide");
+    } else {
+      image.classList.add("high");
+    }
+  };
+
+  if (image.complete) {
+    checkDimensions();
+  } else {
+    image.onload = checkDimensions;
+    image.onerror = () => {
+      console.error("Erro ao carregar a imagem:", image.src);
+    };
+  }
+}

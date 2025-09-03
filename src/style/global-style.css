@@ -1,3 +1,17 @@
+/* image */
+
+.wide {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.high {
+  position: relative;
+  width: auto;
+  height: 100%;
+}
+
 /* buttons */
 
 .simple__button,
@@ -115,4 +129,111 @@
 .logo img {
   width: auto;
   height: 100%;
+}
+
+/* carousel */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  height: 100dvw;
+}
+
+.carousel > input {
+  display: none;
+}
+
+.carousel > #radio2:checked ~ .slides {
+  transform: translateX(-25%);
+}
+
+.carousel > #radio3:checked ~ .slides {
+  transform: translateX(-50%);
+}
+
+.carousel > #radio4:checked ~ .slides {
+  transform: translateX(-75%);
+}
+
+.carousel > .slides {
+  position: relative;
+  width: 400%;
+  height: 100%;
+  display: flex;
+  transition: 1s;
+}
+
+.carousel > .slides > .slide {
+  position: relative;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel > .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel > .nav > .points {
+  display: flex;
+  align-items: end;
+  height: 100%;
+  margin-bottom: 3em;
+}
+
+.carousel > .nav > .points > label {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-style: solid;
+  border-radius: 100em;
+  border-width: 3px;
+  border-color: var(--default-text-color);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.carousel > .nav > .points > label:not(:last-child) {
+  margin-right: 2em;
+}
+
+.carousel > .nav > .points > label:hover {
+  background-color: var(--hover-text-color);
+  border-color: var(--hover-text-color);
+}
+
+.carousel > #radio1:checked ~ .nav > .points > label:nth-child(1),
+.carousel > #radio2:checked ~ .nav > .points > label:nth-child(2),
+.carousel > #radio3:checked ~ .nav > .points > label:nth-child(3),
+.carousel > #radio4:checked ~ .nav > .points > label:nth-child(4) {
+  background-color: var(--hover-text-color);
+}
+
+.carousel > .nav > .solid__button {
+  padding: 3em 0.5em 3em 0.5em;
+  height: 1em;
+}
+
+.carousel > .nav > .left {
+  margin-left: 1em;
+}
+
+.carousel > .nav > .right {
+  margin-right: 1em;
+}
+
+.carousel .wide {
+  width: 85%;
+}
+
+.carousel .high {
+  height: 90%;
 }

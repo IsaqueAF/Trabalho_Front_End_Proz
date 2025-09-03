@@ -1,3 +1,13 @@
+@media screen and (max-width: 1600px) {
+  .greeting > h1 {
+    margin: 25vh 10% 0.5em 10%;
+  }
+
+  .greeting > h2 {
+    margin: 0 20% 0 20%;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .header__container .button span {
     display: none;
@@ -15,6 +25,12 @@
 }
 
 @media screen and (max-width: 650px) {
+  .greeting > h1 {
+    font-size: 35px;
+  }
+  .greeting > h2 {
+    font-size: 15px;
+  }
   .search__bar form input {
     width: 60dvw;
   }

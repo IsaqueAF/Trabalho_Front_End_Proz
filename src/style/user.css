@@ -42,7 +42,7 @@ body {
 
 .main__container > div > form > h1 {
   font-size: 3em;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--title-font-family);
   color: var(--hover-text-color);
   margin-bottom: 0.5em;
 }
