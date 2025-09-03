@@ -1,4 +1,5 @@
 /* buttons */
+
 .simple__button,
 .button {
   display: inline-block;
@@ -63,6 +64,7 @@
 }
 
 /* Input box */
+
 .input__box {
   position: relative;
   margin: 0.8em 0 0.8em 0;
@@ -101,4 +103,16 @@
 
 .input__box > i {
   margin: 0 5px 0 5px;
+}
+
+/* logo */
+
+.logo {
+  height: 100%;
+  text-decoration: none;
+}
+
+.logo img {
+  width: auto;
+  height: 100%;
 }

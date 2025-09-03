@@ -25,7 +25,7 @@ let searchBarFocused = false;
 
 // funcions
 
-function checkHeaderOnScreen (header) {
+function checkHeaderOnScreen(header) {
   return header.getBoundingClientRect().bottom <= 0;
 }
 
@@ -50,37 +50,37 @@ function MoveElements() {
   offscreenHeader = checkHeaderOnScreen(header);
 
   if (window.innerWidth <= breakPoint || offscreenHeader) {
-
     searchBar.classList.remove("hover");
 
-    if (!changed) {return;}
+    if (!changed) {
+      return;
+    }
     change = !inputQuery.classList.contains("shrunken");
 
     MoveElementsToDesktop();
 
     changed = !changed;
-
   } else {
-
     if (searchBarFocused) {
       searchBar.classList.add("hover");
     } else {
       searchBar.classList.remove("hover");
     }
 
-    if (changed) {return;}
+    if (changed) {
+      return;
+    }
     change = !inputQuery.classList.contains("shrunken");
 
     MoveElementsToMobile();
 
     changed = !changed;
-    
   }
 }
 
 window.addEventListener("resize", MoveElements);
 window.addEventListener("scroll", MoveElements);
-document.addEventListener('DOMContentLoaded', MoveElements);
+document.addEventListener("DOMContentLoaded", MoveElements);
 
 // Search bar
 

@@ -13,18 +13,6 @@
   padding: 1em;
 }
 
-/* logo */
-
-.logo {
-  height: 3em;
-  text-decoration: none;
-}
-
-.logo img {
-  width: auto;
-  height: 100%;
-}
-
 /* nav */
 
 .nav__container,
