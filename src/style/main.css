@@ -34,6 +34,7 @@
 
 .search__bar,
 .mobile__buttons {
+  z-index: 1000;
   background-color: var(--search-bar-background-color);
   color: var(--default-text-color);
   padding: 0.5em;
@@ -90,7 +91,6 @@
   position: fixed;
   top: 1em;
   right: 1em;
-  z-index: 1000;
   background-color: var(--header-background-color);
   padding: 0;
 }
