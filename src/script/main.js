@@ -154,34 +154,11 @@ function SetCarousel(carouselSelector) {
     radios[nextIndex].checked = true;
   }
 
-  setInterval(() => moveSlide(1), 10000);
+  setInterval(() => moveSlide(1), 30000);
 
   leftArrow.addEventListener("click", () => moveSlide(-1));
   rightArrow.addEventListener("click", () => moveSlide(1));
 }
 
-SetCarousel(".carousel:first-child");
-
-// image
-const allImages = document.getElementsByTagName("img");
-
-for (let i = 0; i < allImages.length; i++) {
-  const image = allImages[i];
-
-  const checkDimensions = () => {
-    if (image.naturalWidth > image.naturalHeight) {
-      image.classList.add("wide");
-    } else {
-      image.classList.add("high");
-    }
-  };
-
-  if (image.complete) {
-    checkDimensions();
-  } else {
-    image.onload = checkDimensions;
-    image.onerror = () => {
-      console.error("Erro ao carregar a imagem:", image.src);
-    };
-  }
-}
+SetCarousel(".carousel1");
+SetCarousel(".carousel2");

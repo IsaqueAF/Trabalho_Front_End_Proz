@@ -1,17 +1,3 @@
-/* image */
-
-.wide {
-  position: relative;
-  width: 100%;
-  height: auto;
-}
-
-.high {
-  position: relative;
-  width: auto;
-  height: 100%;
-}
-
 /* buttons */
 
 .simple__button,
@@ -141,7 +127,7 @@
 .carousel {
   position: relative;
   overflow: hidden;
-  height: 100dvw;
+  height: 50dvh;
 }
 
 .carousel > input {
@@ -170,10 +156,13 @@
 
 .carousel > .slides > .slide {
   position: relative;
-  width: 25%;
+  width: calc(25% - 10em);
+  height: calc(100% - 10em);
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 5em;
+  color: var(--default-text-color);
+  font-family: var(--title-font-family);
 }
 
 .carousel > .nav {
