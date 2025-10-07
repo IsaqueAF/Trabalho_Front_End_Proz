@@ -127,7 +127,6 @@
 .carousel {
   position: relative;
   overflow: hidden;
-  height: 50dvh;
 }
 
 .carousel > input {
@@ -149,7 +148,6 @@
 .carousel > .slides {
   position: relative;
   width: 400%;
-  height: 100%;
   display: flex;
   transition: 1s;
 }
@@ -157,7 +155,6 @@
 .carousel > .slides > .slide {
   position: relative;
   width: calc(25% - 10em);
-  height: calc(100% - 10em);
   display: flex;
   align-items: center;
   padding: 5em;
