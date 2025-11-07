@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS company_data;
+USE company_data;
+
+CREATE TABLE IF NOT EXISTS client (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(80) NOT NULL,
+    email VARCHAR(80) NOT NULL
+);
