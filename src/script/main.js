@@ -159,6 +159,3 @@ function SetCarousel(carouselSelector) {
   leftArrow.addEventListener("click", () => moveSlide(-1));
   rightArrow.addEventListener("click", () => moveSlide(1));
 }
-
-SetCarousel(".carousel1");
-SetCarousel(".carousel2");

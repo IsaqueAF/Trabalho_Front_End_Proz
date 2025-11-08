@@ -1,3 +1,17 @@
+body {
+  color: white;
+}
+
+.body__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 /* header */
 
 .header__container {
@@ -166,6 +180,70 @@ html {
   margin: 2em;
 }
 
+/* searched__article */
+
+a {
+  text-decoration: none;
+}
+
+.searched__article {
+  background-color: var(--search-bar-background-color);
+  padding: 1em;
+  margin: 1em 15dvw;
+  border-style: ridge;
+  border-radius: 1em;
+  color: white;
+}
+
+.searched__article h1 {
+  font-size: 1.5em;
+}
+
+.searched__article h2,
+.searched__article span,
+.article > h2,
+.article > .dates > span {
+  margin: 0.5em;
+  color: var(--gray-text-color);
+}
+
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alert {
+  font-size: 3em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* article */
+
+.article {
+  background-color: var(--search-bar-background-color);
+  padding: 1em;
+  margin: 1em 5dvw;
+  border-style: ridge;
+  border-radius: 1em;
+  color: white;
+}
+
+.article > h1 {
+  font-size: 3em;
+}
+
+.article > .content {
+  background-color: var(--home-background-color);
+  padding: 1em;
+  margin: 1em 1dvw;
+  border-style: ridge;
+  border-radius: 1em;
+}
+
 /* footer */
 
 .footer__container {
@@ -173,6 +251,7 @@ html {
   position: relative;
   left: 0;
   right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
 }

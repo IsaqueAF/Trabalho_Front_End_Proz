@@ -72,3 +72,7 @@ body > .back {
   font-size: 1em;
   font-weight: bold;
 }
+
+.alert {
+  color: var(--alert-text-color);
+}

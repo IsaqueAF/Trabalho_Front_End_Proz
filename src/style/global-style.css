@@ -92,7 +92,8 @@
   cursor: pointer;
 }
 
-.input__box > input:focus ~ label {
+.input__box > input:focus ~ label,
+.input__box > input:not(:placeholder-shown) ~ label {
   transform: translateY(-100%) scale(0.8);
 }
 
