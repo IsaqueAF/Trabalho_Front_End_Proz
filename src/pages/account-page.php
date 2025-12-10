@@ -5,7 +5,6 @@ require_once __dir__."/../server/account.php";
 require_once __dir__."/../database/getDB.php";
 
 $conn = getDB();
-$errorMessage = "";
 
 if ($conn->connect_error) {
     echo("<h1 class=\"alert\">Erro ao tentar se conectar</h1>");
@@ -24,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   $errorMessage = "";
 
-  // LOGIN
   if (empty($name)) {
     $result = loginUser($conn, $email, $password);
 
@@ -39,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       exit;
     }
 
-  // REGISTRO
   } else {
     if ($register__password !== $confirm__password) {
       $errorMessage = "A senha de confirmação está incorreta";
@@ -73,7 +70,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Template</title>
+    <title>Registro</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/vars.css?v=<?= time() ?>" />
     <link rel="stylesheet" href="../style/reset.css?v=<?= time() ?>" />
     <link rel="stylesheet" href="../style/global-style.css?v=<?= time() ?>" />

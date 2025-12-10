@@ -180,6 +180,31 @@ html {
   margin: 2em;
 }
 
+.catalog {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2em;
+}
+
+.catalog h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  margin-bottom: 1em;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.catalog p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  opacity: 0.3;
+  font-size: 25px;
+  font-weight: bold;
+  width: 90dvw;
+}
+
 /* searched__article */
 
 a {

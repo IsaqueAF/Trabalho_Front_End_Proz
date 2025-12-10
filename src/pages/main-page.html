@@ -1,0 +1,55 @@
+<div class="body__container">
+  <header>
+    <div class="header__container">
+      <div class="logo">
+        <a href="index.php">
+          <img src="src/assets/images/generic-logo.png" alt="Logo" />
+        </a>
+      </div>
+
+      <nav>
+        <div class="nav__container">
+          {{nav__container}}
+          <div class="search__bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <form action="" class="hidden">
+              <input
+                class="shrunken"
+                type="text"
+                placeholder="search for something"
+                name="search__query"
+              />
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="account__container">{{account__container}}</div>
+    </div>
+  </header>
+
+  <div class="mobile__buttons hidden">
+    <button type="button" id="menu__toggle" class="simple__button">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <div class="menu__container menu__hidden">
+    <hr />
+    <hr />
+  </div>
+
+  <main>
+    <div class="main__container">{{main__container}}</div>
+  </main>
+
+  <footer>
+    <div class="footer__container">
+      <section id="contact">
+        <h2>© 2025 GenericCompany. Todos os direitos reservados.</h2>
+      </section>
+    </div>
+  </footer>
+</div>
+
+<script type="module" src="src/script/main.js"></script>

@@ -56,4 +56,10 @@
     font-size: 15px;
     margin: 2em;
   }
+  .catalog h1 {
+    font-size: 25px;
+  }
+  .catalog p {
+    font-size: 15px;
+  }
 }

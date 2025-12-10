@@ -30,7 +30,7 @@ if (!$stmt->execute()) {
 }
 $result = $stmt->get_result();
 
-$searchTemplate = file_get_contents(__DIR__."/../pages/search-template.html");
+$searchTemplate = file_get_contents(__DIR__."/../pages/template/search-template.html");
 $content = "<ul>";
 
 if ($result->num_rows > 0) {

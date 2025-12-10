@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página Base</title>
+    <title>Generic Company</title>
+    <link rel="shortcut icon" href="src/assets/images/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="src/style/vars.css?v=<?= time() ?>">
     <link rel="stylesheet" href="src/style/reset.css?v=<?= time() ?>">
@@ -19,34 +20,47 @@
   </head>
   <body>
     <?php
+    // start session
+    session_start();
+    
+    // require libraries
     require_once __dir__."/src/database/getDB.php";
     require_once __dir__."/src/server/account.php";
 
-    session_start();
-
+    // start DB
     $conn = getDB();
-    $errorMessage = "";
 
     if ($conn->connect_error) {
-        echo("<h1 class=\"alert\">Erro ao tentar se conectar</h1>");
-        $conn->close();
-        return;
+      die("<h1 class=\"alert\">Erro ao tentar se conectar</h1>");
     }
 
-    $user = getUser($conn, $_SESSION["userid"]);
-    echo $user["name"];
+    // get user
+    if (isset($_SESSION["userid"])) {
+      $user = getUser($conn, $_SESSION["userid"]);
+    }
 
-    $template = file_get_contents("src/pages/template.html");
+    // preparate content
+    $template = file_get_contents("src/pages/main-page.html");
+    $accountContent;
+    $navContent;
     $content;
-    
-    if (count($_GET) === 0) {
-      global $content;
-      $content = file_get_contents("src/pages/home.html");
+
+    // get correct content
+    if (!isset($user)) {
+      $content = file_get_contents("src/pages/content/greeting-content.html");
+      $accountContent = file_get_contents("src/pages/template/greeting-account-template.html");
+      $navContent = file_get_contents("src/pages/template/greeting-nav-template.html");
     } else {
-      $search = $_GET["article"] ?? '';
-       if ($search == "") {
+      $content = file_get_contents("src/pages/content/dashboard-content.html");
+      $accountContent = file_get_contents("src/pages/template/dashboard-account-template.html");
+      $navContent = file_get_contents("src/pages/template/dashboard-nav-template.html");
+    }
+    
+    if (count($_GET) > 0) {
+      $search = $_GET["article"] ?? "";
+      if ($search == "") {
         ob_start();
-        $search = $_GET["search__query"] ?? '';
+        $search = $_GET["search__query"] ?? "";
         include("./src/server/search.php");
         $content = ob_get_clean();
       } else {
@@ -56,10 +70,13 @@
       }
     }
 
+    // join content
     $template = str_replace("{{main__container}}", $content, $template);
+    $template = str_replace("{{account__container}}", $accountContent, $template);
+    $template = str_replace("{{nav__container}}", $navContent, $template);
     
+    // inject content
     echo $template;
-    $conn->close();
     ?>
   </body>
 </html>

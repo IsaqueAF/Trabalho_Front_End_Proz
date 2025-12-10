@@ -24,21 +24,19 @@ if (!$stmt->execute()) {
 }
 $result = $stmt->get_result();
 
-$articleTemplate = file_get_contents(__DIR__."/../pages/article-template.html");
+$articleContent = file_get_contents(__DIR__."/../pages/content/article-content.html");
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    global $content;
-    $currentTemplate = $GLOBALS["articleTemplate"];
+    $content = $GLOBALS["articleContent"];
 
-    $currentTemplate = str_replace("{{slug}}", $row["slug"], $currentTemplate);
-    $currentTemplate = str_replace("{{title}}", $row["title"], $currentTemplate);
-    $currentTemplate = str_replace("{{user}}", $row["name"], $currentTemplate);
-    $currentTemplate = str_replace("{{createDate}}", date("d/m/Y H:i", strtotime($row["created_at"])), $currentTemplate);
-    $currentTemplate = str_replace("{{updateDate}}", date("d/m/Y H:i", strtotime($row["updated_at"])), $currentTemplate);
-    $currentTemplate = str_replace("{{content}}", $row["content"], $currentTemplate);
+    $content = str_replace("{{slug}}", $row["slug"], $content);
+    $content = str_replace("{{title}}", $row["title"], $content);
+    $content = str_replace("{{user}}", $row["name"], $content);
+    $content = str_replace("{{createDate}}", date("d/m/Y H:i", strtotime($row["created_at"])), $content);
+    $content = str_replace("{{updateDate}}", date("d/m/Y H:i", strtotime($row["updated_at"])), $content);
+    $content = str_replace("{{content}}", $row["content"], $content);
 
-    $content = $content.$currentTemplate;
     echo $content;
 } else {
     echo("<h1 class=\"alert\">Artigo não encontrado</h1>");
